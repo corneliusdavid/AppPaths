@@ -115,10 +115,22 @@ begin
   // fill the file list with file names for the specified path
   tblFiles.EmptyDataSet;
 
-  LFileList := TDirectory.GetFiles(tblPathsPathValue.AsString);
 
-  for var AFile in LFileList do
-    tblFiles.AppendRecord([AFile]);
+
+  TDirectory.GetFiles(tblPathsPathValue.AsString, TSearchOption.soAllDirectories,
+     function(const Path: string; const SearchRec: TSearchRec): Boolean
+     begin
+       if tblFiles.RecordCount > 1000 then
+         Result := False
+       else begin
+         tblFiles.AppendRecord([TPath.Combine(Path, SearchRec.Name)]);
+         if tblFiles.RecordCount >= 1000 then
+           tblFiles.AppendRecord(['(File list capped at 1,000)']);
+         Result := True;
+       end;
+     end);
+
+  tblFiles.First;
 end;
 
 procedure TfrmAppPaths.RefreshPathList;
@@ -150,6 +162,8 @@ begin
   tblPaths.AppendRecord(['Ringtones', TPath.GetRingtonesPath]);
   tblPaths.AppendRecord(['Shared Ringtones', TPath.GetSharedRingtonesPath]);
   {$ENDIF}
+
+  tblPaths.First;
 end;
 
 procedure TfrmAppPaths.lvPathsGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);

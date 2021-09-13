@@ -1,26 +1,24 @@
 inherited frmAppPaths_Windows: TfrmAppPaths_Windows
-  ClientWidth = 473
+  ClientWidth = 524
   DesignerMasterStyle = 0
   inherited pnlBottom: TPanel
-    Size.Width = 473.000000000000000000
+    Size.Width = 524.000000000000000000
     inherited lblTitle: TLabel
-      Size.Width = 440.000000000000000000
+      Size.Width = 491.000000000000000000
     end
   end
   inherited tabctrlAppPaths: TTabControl
-    Size.Width = 473.000000000000000000
+    Size.Width = 524.000000000000000000
     Sizes = (
-      473s
+      524s
       477s
-      473s
+      524s
       477s)
     inherited tabPaths: TTabItem
       ExplicitSize.cx = 69.000000000000000000
       ExplicitSize.cy = 26.000000000000000000
       inherited lvPaths: TListView
-        AllowSelection = True
-        Size.Width = 473.000000000000000000
-        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+        Size.Width = 524.000000000000000000
       end
     end
     inherited tabFiles: TTabItem
@@ -28,13 +26,13 @@ inherited frmAppPaths_Windows: TfrmAppPaths_Windows
       ExplicitSize.cy = 26.000000000000000000
       inherited lvFiles: TListView
         ItemIndex = -1
-        Size.Width = 473.000000000000000000
+        Size.Width = 524.000000000000000000
         ItemAppearanceObjects.HeaderObjects.Text.WordWrap = True
       end
       inherited pnlFiles: TPanel
-        Size.Width = 473.000000000000000000
+        Size.Width = 524.000000000000000000
         inherited lblPathName: TLabel
-          Size.Width = 440.000000000000000000
+          Size.Width = 491.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
         end
       end

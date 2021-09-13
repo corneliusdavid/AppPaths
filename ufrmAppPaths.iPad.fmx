@@ -33,7 +33,6 @@ inherited frmAppPaths_iPad: TfrmAppPaths_iPad
       inherited lvPaths: TListView
         Size.Width = 768.000000000000000000
         Size.Height = 915.000000000000000000
-        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
       end
     end
     inherited tabFiles: TTabItem

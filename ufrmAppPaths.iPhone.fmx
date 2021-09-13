@@ -34,8 +34,6 @@ inherited frmAppPaths_iPhone: TfrmAppPaths_iPhone
       inherited lvPaths: TListView
         Size.Width = 320.000000000000000000
         Size.Height = 371.000000000000000000
-        ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
-        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
       end
     end
     inherited tabFiles: TTabItem

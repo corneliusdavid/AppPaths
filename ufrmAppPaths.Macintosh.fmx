@@ -19,7 +19,6 @@ inherited frmAppPaths_Macintosh: TfrmAppPaths_Macintosh
       ExplicitSize.cy = 26.000000000000000000
       inherited lvPaths: TListView
         Size.Width = 437.000000000000000000
-        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
       end
     end
     inherited tabFiles: TTabItem
