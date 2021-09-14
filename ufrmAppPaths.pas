@@ -45,6 +45,8 @@ type
     procedure lvPathsGesture(Sender: TObject; const EventInfo: TGestureEventInfo; var Handled: Boolean);
     procedure lvPathsItemClick(const Sender: TObject; const AItem: TListViewItem);
   private
+    const
+      MAX_FILES = 100;
     procedure CheckYesButton(Sender: TObject; const AResult: TModalResult);
     procedure GotoGitHub;
     procedure RefreshPathList;
@@ -73,7 +75,7 @@ implementation
 uses
   System.IOUtils,
   FMX.DialogService.Async,
-  uOpenURL;
+  uSearchRecList, uOpenURL;
 
 procedure TfrmAppPaths.btnInfoClick(Sender: TObject);
 begin
@@ -111,24 +113,30 @@ end;
 procedure TfrmAppPaths.RefreshFileList;
 var
   LFileList: TArray<System.string>;
+  LCurrPath: string;
+  LStopMsgAdded: Boolean;
 begin
   // fill the file list with file names for the specified path
   tblFiles.EmptyDataSet;
 
+  LSTopMsgAdded := False;
+  LCurrPath := tblPathsPathValue.AsString;
 
-
-  TDirectory.GetFiles(tblPathsPathValue.AsString, TSearchOption.soAllDirectories,
-     function(const Path: string; const SearchRec: TSearchRec): Boolean
-     begin
-       if tblFiles.RecordCount > 1000 then
-         Result := False
-       else begin
-         tblFiles.AppendRecord([TPath.Combine(Path, SearchRec.Name)]);
-         if tblFiles.RecordCount >= 1000 then
-           tblFiles.AppendRecord(['(File list capped at 1,000)']);
-         Result := True;
-       end;
-     end);
+  GetSearchRecs(tblPathsPathValue.AsString, '*.*', True,
+    procedure(const Path: string; var Stop: Boolean)
+    begin
+      LCurrPath := Path;
+      Stop := tblFiles.RecordCount > MAX_FILES;
+    end,
+    procedure (FileInfo: TSearchRec)
+    begin
+      if tblFiles.RecordCount <= MAX_FILES then
+        tblFiles.AppendRecord([TPath.Combine(LCurrPath, FileInfo.Name)])
+      else if not LStopMsgAdded then begin
+        tblFiles.AppendRecord([Format('(File count capped at %d)', [MAX_FILES])]);
+        LStopMsgAdded := True;
+      end;
+    end);
 
   tblFiles.First;
 end;
