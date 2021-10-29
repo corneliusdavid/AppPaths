@@ -11,6 +11,7 @@ Expanded from the sample project included with the code for the book [Fearless C
 See the original GitHub project: https://github.com/PacktPublishing/Fearless-Cross-Platform-Development-with-Delphi/tree/master/Chapter15/01_AppPaths
 
 Here's a screenshot of it running on a Mac:
+
 ![AppPaths running on a Mac](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_MacOSX.png)
 
 Written in _Delphi 11 Alexandria_.
