@@ -18,4 +18,8 @@ If you click on a folder, you'll get a list of files in that folder (if there ar
 
 ![AppPaths running on Win32 showing Release files](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_Win32_ReleaseFolder.png)
 
+if you click the cirled "i" button in the lower-left corner, an Info screen pops up with a link to the GitHub page:
+
+![AppPaths running on Android showing the Info page](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_AndroidAbout.png)
+
 Written in _Delphi 11 Alexandria_.
