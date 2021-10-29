@@ -4,8 +4,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   ufrmAppPaths in 'ufrmAppPaths.pas' {frmAppPaths},
-  uOpenURL in 'uOpenURL.pas',
-  uSearchRecList in 'uSearchRecList.pas';
+  uOpenURL in 'uOpenURL.pas';
 
 {$R *.res}
 

@@ -75,7 +75,7 @@ implementation
 uses
   System.IOUtils,
   FMX.DialogService.Async,
-  uSearchRecList, uOpenURL;
+  uOpenURL;
 
 procedure TfrmAppPaths.btnInfoClick(Sender: TObject);
 begin
@@ -112,29 +112,25 @@ end;
 
 procedure TfrmAppPaths.RefreshFileList;
 var
-  LFileList: TArray<System.string>;
+  LMaxFileMsgAdded: Boolean;
   LCurrPath: string;
-  LStopMsgAdded: Boolean;
 begin
   // fill the file list with file names for the specified path
   tblFiles.EmptyDataSet;
 
-  LSTopMsgAdded := False;
   LCurrPath := tblPathsPathValue.AsString;
+  LMaxFileMsgAdded := False;
 
-  GetSearchRecs(tblPathsPathValue.AsString, '*.*', True,
-    procedure(const Path: string; var Stop: Boolean)
+  TDirectory.GetFiles(tblPathsPathValue.AsString, TSearchOption.soTopDirectoryOnly,
+    function(const Path: string; const SearchRec: TSearchRec): Boolean
     begin
-      LCurrPath := Path;
-      Stop := tblFiles.RecordCount > MAX_FILES;
-    end,
-    procedure (FileInfo: TSearchRec)
-    begin
-      if tblFiles.RecordCount <= MAX_FILES then
-        tblFiles.AppendRecord([TPath.Combine(LCurrPath, FileInfo.Name)])
-      else if not LStopMsgAdded then begin
+      Result := tblFiles.RecordCount < MAX_FILES;
+
+      if Result then
+        tblFiles.AppendRecord([SearchRec.Name])
+      else if not LMaxFileMsgAdded then begin
+        LMaxFileMsgAdded := True;
         tblFiles.AppendRecord([Format('(File count capped at %d)', [MAX_FILES])]);
-        LStopMsgAdded := True;
       end;
     end);
 
