@@ -9,7 +9,8 @@ uses
   FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   FireDAC.Stan.StorageBin, Data.Bind.EngExt, Fmx.Bind.DBEngExt, System.Rtti, System.Bindings.Outputs, Fmx.Bind.Editors,
   Data.Bind.Components, Data.Bind.DBScope, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, FMX.ListView,
-  FMX.TabControl, System.Actions, FMX.ActnList;
+  FMX.TabControl, System.Actions, FMX.ActnList, Beyond.Bind.DateUtils,
+  Beyond.Bind.Json, Beyond.Bind.StrUtils;
 
 type
   TfrmAppPaths = class(TForm)

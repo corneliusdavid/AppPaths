@@ -12,7 +12,7 @@ inherited frmAppPaths_iPhone55in: TfrmAppPaths_iPhone55in
     end
     inherited btnInfo: TButton
       Size.Width = 44.000000000000000000
-      Size.Height = 44.000000000000000000
+      Size.Height = 40.000000000000000000
     end
   end
   inherited tabctrlAppPaths: TTabControl
@@ -27,7 +27,7 @@ inherited frmAppPaths_iPhone55in: TfrmAppPaths_iPhone55in
       627s)
     inherited tabPaths: TTabItem
       IsSelected = False
-      Size.Width = 207.000000000000000000
+      Size.Width = 49.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 200.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -39,7 +39,7 @@ inherited frmAppPaths_iPhone55in: TfrmAppPaths_iPhone55in
     end
     inherited tabFiles: TTabItem
       IsSelected = True
-      Size.Width = 207.000000000000000000
+      Size.Width = 44.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 100.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -54,7 +54,7 @@ inherited frmAppPaths_iPhone55in: TfrmAppPaths_iPhone55in
         Size.Height = 41.000000000000000000
         inherited btnBack: TButton
           Size.Width = 44.000000000000000000
-          Size.Height = 44.000000000000000000
+          Size.Height = 41.000000000000000000
         end
         inherited lblPathName: TLabel
           StyledSettings = [Family, FontColor]

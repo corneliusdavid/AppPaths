@@ -13,7 +13,7 @@ inherited frmAppPaths_SmXhdpiPh: TfrmAppPaths_SmXhdpiPh
     end
     inherited btnInfo: TButton
       Size.Width = 48.000000000000000000
-      Size.Height = 48.000000000000000000
+      Size.Height = 40.000000000000000000
     end
   end
   inherited tabctrlAppPaths: TTabControl
@@ -26,7 +26,7 @@ inherited frmAppPaths_SmXhdpiPh: TfrmAppPaths_SmXhdpiPh
       250s
       286s)
     inherited tabPaths: TTabItem
-      Size.Width = 125.000000000000000000
+      Size.Width = 68.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 200.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -37,7 +37,7 @@ inherited frmAppPaths_SmXhdpiPh: TfrmAppPaths_SmXhdpiPh
       end
     end
     inherited tabFiles: TTabItem
-      Size.Width = 125.000000000000000000
+      Size.Width = 62.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 100.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -52,7 +52,7 @@ inherited frmAppPaths_SmXhdpiPh: TfrmAppPaths_SmXhdpiPh
         Size.Height = 41.000000000000000000
         inherited btnBack: TButton
           Size.Width = 48.000000000000000000
-          Size.Height = 48.000000000000000000
+          Size.Height = 41.000000000000000000
         end
         inherited lblPathName: TLabel
           Size.Width = 202.000000000000000000
@@ -35516,7 +35516,7 @@ inherited frmAppPaths_SmXhdpiPh: TfrmAppPaths_SmXhdpiPh
   end
   inherited tblFiles: TFDMemTable
     Content = {
-      414442530F000000D8000000FF00010001FF02FF03040010000000740062006C
+      4144425310000000D8000000FF00010001FF02FF03040010000000740062006C
       00460069006C006500730005000A0000005400610062006C0065000600000000
       00070000080032000000090000FF0AFF0B040010000000460069006C0065006E
       0061006D006500050010000000460069006C0065006E0061006D0065000C0001

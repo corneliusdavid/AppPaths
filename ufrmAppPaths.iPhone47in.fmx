@@ -11,7 +11,7 @@ inherited frmAppPaths_iPhone47in: TfrmAppPaths_iPhone47in
     end
     inherited btnInfo: TButton
       Size.Width = 44.000000000000000000
-      Size.Height = 44.000000000000000000
+      Size.Height = 40.000000000000000000
     end
   end
   inherited tabctrlAppPaths: TTabControl
@@ -26,7 +26,7 @@ inherited frmAppPaths_iPhone47in: TfrmAppPaths_iPhone47in
       558s)
     inherited tabPaths: TTabItem
       IsSelected = False
-      Size.Width = 187.000000000000000000
+      Size.Width = 49.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 200.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
@@ -38,27 +38,27 @@ inherited frmAppPaths_iPhone47in: TfrmAppPaths_iPhone47in
     end
     inherited tabFiles: TTabItem
       IsSelected = True
-      Size.Width = 188.000000000000000000
+      Size.Width = 44.000000000000000000
       Size.Height = 49.000000000000000000
       ExplicitSize.cx = 100.000000000000000000
       ExplicitSize.cy = 49.000000000000000000
-      inherited pnlFiles: TPanel [0]
+      inherited lvFiles: TListView
+        Size.Width = 375.000000000000000000
+        Size.Height = 517.000000000000000000
+        ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
+      end
+      inherited pnlFiles: TPanel
         Size.Width = 375.000000000000000000
         Size.Height = 41.000000000000000000
         inherited btnBack: TButton
           Size.Width = 44.000000000000000000
-          Size.Height = 44.000000000000000000
+          Size.Height = 41.000000000000000000
         end
         inherited lblPathName: TLabel
           StyledSettings = [Family, FontColor]
           Size.Height = 41.000000000000000000
           TextSettings.Font.Size = 11.000000000000000000
         end
-      end
-      inherited lvFiles: TListView [1]
-        Size.Width = 375.000000000000000000
-        Size.Height = 517.000000000000000000
-        ItemAppearanceObjects.ItemObjects.Text.Font.Size = 11.000000000000000000
       end
     end
   end
