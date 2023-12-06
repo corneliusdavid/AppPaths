@@ -12,7 +12,7 @@ See the original GitHub project: https://github.com/PacktPublishing/Fearless-Cro
 
 Here's a screenshot of it running on a Mac:
 
-![AppPaths running on a Mac](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_MacOSX.png)
+![AppPaths running on a Mac](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_MacOSX_D12.png)
 
 If you click on a folder, you'll get a list of files in that folder (if there are any). For example, here are the files under the Release folder for the Win32 version:
 
