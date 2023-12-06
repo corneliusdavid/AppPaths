@@ -143,6 +143,12 @@ begin
   tblPaths.EmptyDataSet;
   tblPaths.AppendRecord(['Application Name', ParamStr(0)]);
   tblPaths.AppendRecord(['Current directory', GetCurrentDir]);
+  {$IFDEF CONDITIONALEXPRESSIONS}
+    {$IF CompilerVersion >= 29.0}
+    tblPaths.AppendRecord(['AppPath', TPath.GetAppPath]);
+    tblPaths.AppendRecord(['Desktop', TPath.GetDesktopPath]);
+    {$ENDIF}
+  {$ENDIF}
   tblPaths.AppendRecord(['Temp', TPath.GetTempPath]);
   tblPaths.AppendRecord(['Home', TPath.GetHomePath]);
   tblPaths.AppendRecord(['Documents', TPath.GetDocumentsPath]);
