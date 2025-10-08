@@ -1,4 +1,9 @@
 # AppPaths
+
+[![Delphi](https://img.shields.io/badge/Delphi-RAD%20Studio-red.svg)](https://www.embarcadero.com/products/rad-studio)
+[![Platform](https://img.shields.io/badge/Platform-ALL-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Simple Delphi cross-platform app to list the standard paths available on various platforms.
 Uses the `System.IOUtils` unit to show the value of several `TPath` functions.
 
