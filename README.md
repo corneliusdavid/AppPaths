@@ -22,4 +22,12 @@ if you click the cirled "i" button in the lower-left corner, an Info screen pops
 
 ![AppPaths running on Android showing the Info page](https://github.com/corneliusdavid/AppPaths/blob/main/AppPaths_AndroidAbout.png)
 
-Written in _Delphi 11 Alexandria_.
+Written in _Delphi 11 Alexandria_, upgraded to _Delphi 13 Florence_.
+
+### Android Tip
+
+To get this running on your Android phone, run `adb` from the `platform-tools` folder of your copy of Android SDK which your project is using. For me using Delphi 13 and its default Android SDK folders, that would be `C:\Users\Public\Documents\Embarcadero\Studio\37.0\CatalogRepository\AndroidSDK-37.0.57242.3601`. I added the `platform-tools` sub-folder to the PATH so I could run `adb.exe` easilly.
+
+Once that is running, use `adb` to `connect` to your phone's IP address. I am using Wireless Debugging which meant I had to pair the devices first using `adb pair <IP-Address>:<Port> <Pairing-Code>` and _then_ use the `connect` command with the `IPAddress`:`Port`.
+
+Hope that helps!
