@@ -56,6 +56,7 @@ inherited frmAppPaths_iPhone47in: TfrmAppPaths_iPhone47in
         end
         inherited lblPathName: TLabel
           StyledSettings = [Family, FontColor]
+          Size.Width = 331.000000000000000000
           Size.Height = 41.000000000000000000
           TextSettings.Font.Size = 11.000000000000000000
         end
