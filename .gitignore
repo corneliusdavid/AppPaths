@@ -72,3 +72,6 @@ Android64/
 iOSDevice64/
 OSX64/
 LaunchScreen.TemplateiOS/
+*.res
+*.xml
+*.dsv
